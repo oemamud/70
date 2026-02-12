@@ -6,7 +6,7 @@
   <LatLonBounds>117.089538574,-0.49712511,117.09777832,-0.49025891</LatLonBounds>
   <NumZoomLevels>23</NumZoomLevels>
   <TileSize>256</TileSize>
-  <BaseURL><![CDATA[file:///C:/Users/Admin/Documents/GitHub/70/New%20folder/Z%z/%y/%x.png]]></BaseURL>
+  <BaseURL><https://github.com/oemamud/70/tree/96cb060dc98c468488bcf127c0b0beea2d2febd1/New%20folder/Z%z/%y/%x.png]]></BaseURL>
   <NativeProj>EPSG:3857</NativeProj>
 </source>
 </source_list>
