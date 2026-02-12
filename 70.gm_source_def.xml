@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<source_list version="1.0" creator="Global Mapper - http://www.globalmapper.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.globalmapper.com/OSL/1/0" xsi:schemaLocation="http://www.globalmapper.com/OSL/1/0 http://www.globalmapper.com/OSL/1/0/gmc.xsd">
+<source type="GMAP">
+  <name>My Map Set Name</name>
+  <FileExt>png</FileExt>
+  <LatLonBounds>117.089538574,-0.49712511,117.09777832,-0.49025891</LatLonBounds>
+  <NumZoomLevels>23</NumZoomLevels>
+  <TileSize>256</TileSize>
+  <BaseURL><![CDATA[file:///C:/Users/Admin/Documents/GitHub/70/New%20folder/Z%z/%y/%x.png]]></BaseURL>
+  <NativeProj>EPSG:3857</NativeProj>
+</source>
+</source_list>

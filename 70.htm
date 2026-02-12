@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>My Map Set Name (Google Maps Export from Global Mapper)</title>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+
+    var G = google.maps;
+    var map;
+    
+    var customMapType = new G.ImageMapType
+      (
+        {
+        getTileUrl: function(coord, zoom)
+          {
+          var normalizedCoord = getNormalizedCoord(coord, zoom);
+          if (!normalizedCoord) { return null; }
+          
+          if ( zoom == 18 && normalizedCoord.x >= 216334 && normalizedCoord.x <= 216339 && normalizedCoord.y >= 131429 && normalizedCoord.y <= 131433 )
+          {
+            return "file:///C://Users//Admin//Documents//GitHub//70//New%20folder//Z" + zoom + "/" + normalizedCoord.y + "/" + normalizedCoord.x + ".png"; // replace that with a "real" URL
+          }
+          else if ( zoom == 19 && normalizedCoord.x >= 432668 && normalizedCoord.x <= 432678 && normalizedCoord.y >= 262858 && normalizedCoord.y <= 262867 )
+          {
+            return "file:///C://Users//Admin//Documents//GitHub//70//New%20folder//Z" + zoom + "/" + normalizedCoord.y + "/" + normalizedCoord.x + ".png"; // replace that with a "real" URL
+          }
+          else if ( zoom == 20 && normalizedCoord.x >= 865337 && normalizedCoord.x <= 865356 && normalizedCoord.y >= 525717 && normalizedCoord.y <= 525735 )
+          {
+            return "file:///C://Users//Admin//Documents//GitHub//70//New%20folder//Z" + zoom + "/" + normalizedCoord.y + "/" + normalizedCoord.x + ".png"; // replace that with a "real" URL
+          }
+          else if ( zoom == 21 && normalizedCoord.x >= 1730675 && normalizedCoord.x <= 1730712 && normalizedCoord.y >= 1051434 && normalizedCoord.y <= 1051470 )
+          {
+            return "file:///C://Users//Admin//Documents//GitHub//70//New%20folder//Z" + zoom + "/" + normalizedCoord.y + "/" + normalizedCoord.x + ".png"; // replace that with a "real" URL
+          }
+          else if ( zoom == 22 && normalizedCoord.x >= 3461350 && normalizedCoord.x <= 3461424 && normalizedCoord.y >= 2102869 && normalizedCoord.y <= 2102941 )
+          {
+            return "file:///C://Users//Admin//Documents//GitHub//70//New%20folder//Z" + zoom + "/" + normalizedCoord.y + "/" + normalizedCoord.x + ".png"; // replace that with a "real" URL
+          }
+          return null;
+        },
+
+        alt: "My Map Set Name",
+        tileSize: new G.Size(256, 256),
+        isPng: true,
+        maxZoom: 22,
+        minZoom: 18,
+        opacity: 1.00,
+        name: "My Map Set Name"
+      }
+    )
+
+    function getNormalizedCoord(coord, zoom)
+    {
+      var y = coord.y;
+      var x = coord.x;
+      
+      var tileRange = 1 << zoom;
+      
+      if (y < 0 || y >= tileRange) { return null; }
+      if (x < 0 || x >= tileRange)
+      {
+        x = (x % tileRange + tileRange) % tileRange;
+      }
+      
+      return { x: x, y: y };
+    }
+
+    function initialize()
+    {
+      var myLatlng = new G.LatLng(-0.493692,117.093658);
+      var myOptions = {
+        center: myLatlng,
+        zoom: 18,
+        mapTypeId: G.MapTypeId.HYBRID,
+        mapTypeControl: true,
+        overviewMapControl: true,
+        scaleControl: true,
+        streetViewControl: true,
+        panControl: true,
+        zoomControl: true,
+        zoomControlOptions: { style: google.maps.ZoomControlStyle.DEFAULT }
+      };
+      
+      map = new G.Map(document.getElementById("map_canvas"), myOptions);
+      map.overlayMapTypes.insertAt(0, customMapType);
+    }
+    </script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="width: 100%; height: 800px; margin: 0px 0px 0px 0px; float: middle;"></div>
+</body> </html>
